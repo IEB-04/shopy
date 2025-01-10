@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2017",
+=======
+    "target" :  "es5" ,
+    "forceConsistentCasingInFileNames" :  true ,
+>>>>>>> 659562be8a24cf38cc0770bc41c32cf43b60117e
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
