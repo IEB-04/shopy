@@ -1,0 +1,29 @@
+/* style.css */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* گرادینت ملایم از رنگ‌های سفید و آبی روشن */
+}
+.box .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  backdrop-filter: blur(7px);
+  transform: perspective(800px) rotateX(-180deg);
+}
+.box .back h1 {
+  font-family: 'kalameh black';
+}
+.box .back p {
+  margin: 10px 20px;
+  font-family: 'kalameh bold';
+  font-size: 18px;
+}
+.box:hover .front {
+  transform: perspective(800px) rotateX(-180deg);
+
+}
+.box:hover .back {
+  border-radius: 20px 20px 0 0;
+  transform: perspective(800px) rotateX(0);
+}
