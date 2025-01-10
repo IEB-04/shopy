@@ -1,4 +1,4 @@
-"use client"; // علامت‌گذاری فایل به عنوان کامپوننت کلاینت
+"use client"; 
 
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
@@ -21,11 +21,6 @@ const Register: NextPage = () => {
 
     return (
         <>
-                <div className="back">
-      <h1>دانلود سریال Money heist</h1>
-      <p>خلاصه داستان : سریال خانه کاغذی، یک مرد مرموز به اسم پروفسور نقشه بزرگترین سرقت تاریخ را طرح ریزی می کند و برای این کار یک تیم هشت نفره که هرکدام مهارت های منحصر به فرد خود را دارند و هیچ چیزی برای از دست دادن ندارند را استخدام می کند و…</p>
-    </div>
-        
             <div className="back min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 </div>
