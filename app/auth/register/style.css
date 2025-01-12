@@ -1,29 +1,88 @@
 /* style.css */
-body {
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* گرادینت ملایم از رنگ‌های سفید و آبی روشن */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,400&display=swap');
+
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans';
 }
-.box .back {
+body {
+  background: linear-gradient(135deg, rgb(30, 144, 255), rgb(255, 105, 180), rgb(255, 215, 0), rgb(139, 0, 139), rgb(255, 255, 0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.card {
+  width: 250px;
+  min-height: 300px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px; /* فاصله از بالای صفحه */
+}
+.card .content {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.527);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
-  backdrop-filter: blur(7px);
-  transform: perspective(800px) rotateX(-180deg);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.055);
+  transition: all .4s;
+  bottom: 0; /* ارتفاع از پایین اضافه می‌شود */
+  left: 0;
 }
-.box .back h1 {
-  font-family: 'kalameh black';
+.card .content p {
+  font-size: 0.8em;
+  padding: 15px;
+  text-align: center;
 }
-.box .back p {
-  margin: 10px 20px;
-  font-family: 'kalameh bold';
-  font-size: 18px;
+.card:hover .content {
+  color: rgb(36, 36, 36);
+  min-height: 500px; /* افزایش ارتفاع در هنگام هاور */
 }
-.box:hover .front {
-  transform: perspective(800px) rotateX(-180deg);
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgb(60, 179, 113);
+  z-index: -20;
+  transition: all .6s;
+}
+.card::before {
+  top: 0;
+  right: 0;
+}
+.card::after {
+  bottom: 0;
+  left: 0;
+  background: rgb(255, 99, 71);
+}
+.card:hover::before {
+  width: 70px;
+  height: 70px;
+  transform: translate(30px, -30px);
+  border-radius: 50%;
+}
+.card:hover::after {
+  width: 100px;
+  height: 100px;
+  transform: translate(-30px, 30px);
+  border-radius: 50%;
+}
 
-}
-.box:hover .back {
-  border-radius: 20px 20px 0 0;
-  transform: perspective(800px) rotateX(0);
-}

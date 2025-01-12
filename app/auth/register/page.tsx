@@ -3,6 +3,8 @@
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
 import type { NextPage } from 'next';
+import Input from '@/app/component/shared/forms/input/input';
+import GlowingButton from '@/app/component/shared/forms/button/button';
 import './style.css'
 
 interface RegisterFormValues {
@@ -25,8 +27,8 @@ const Register: NextPage = () => {
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 </div>
 
-                <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
-                    <div className="bg-white py-4 px-2 shadow sm:rounded-lg sm:px-10">
+                <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md card">
+                    <div className="bg-white py-4 px-2 shadow sm:rounded-lg sm:px-10 content">
                         <Formik
                             initialValues={initialValues}
                             onSubmit={(values) => {
@@ -43,30 +45,15 @@ const Register: NextPage = () => {
                                 </div>
                                 <div>
                                     
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                                        Name
-                                    </label>
-                                    <div className="my-3">
-                                        <Field id="name" name="name" type="text" autoComplete="name" required className="appearance-none block w-full px-3 py-2 border border-black-300 rounded-md shadow-sm placeholder-black-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-                                    </div>
+                                <Input name='name' label='Your Name'/>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                        Email address
-                                    </label>
-                                    <div className="my-3">
-                                        <Field id="email" name="email" type="email" autoComplete="email" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-                                    </div>
+                                    <Input name='email' type='email' label='Email Address'/>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                                        Password
-                                    </label>
-                                    <div className="my-3">
-                                        <Field id="password" name="password" type="password" autoComplete="current-password" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-                                    </div>
+                                <Input name='password' type='' label='Password'/>
                                 </div>
 
                                 <div>
