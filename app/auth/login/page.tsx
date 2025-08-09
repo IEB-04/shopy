@@ -1,12 +1,13 @@
-"use client"; 
+"use client";
 import React from 'react';
 import type { NextPage } from 'next';
-import RegisterForm from '@/app/forms/auth/registerForm';
+import LoginForm from '@/app/forms/auth/loginForm';
 import './style.css';
 import './reset.css';
 
 
-const Register: NextPage = () => {
+
+const Login: NextPage = () => {
 
     return (
         <>
@@ -16,7 +17,7 @@ const Register: NextPage = () => {
 
                 <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md card">
                     <div className="bg-white py-4 px-2 shadow sm:rounded-lg sm:px-10 content">
-                        <RegisterForm/>
+                        <LoginForm />
                     </div>
                 </div>
             </div>
@@ -25,4 +26,4 @@ const Register: NextPage = () => {
 };
 
 
-export default Register;
+export default Login;
